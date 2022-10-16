@@ -1,0 +1,624 @@
+body {
+  width: 100%;
+  margin: auto;
+}
+
+.containerDesign {
+  width: auto;
+  height: 35.5em;
+  position: relative;
+  top: 7.5em;
+  left: 0em;
+  background-color: #37bfc8;
+}
+
+.desk {
+  width: 40em;
+  height: 0.5em;
+  background-color: #714724;
+  position: absolute;
+  top: 35em;
+  left: 20em;
+  border-radius: 5em;
+  box-shadow: 0 3px #48301d;
+}
+
+.laptop {
+  width: 13em;
+  height: 8em;
+  position: absolute;
+  bottom: 1em;
+  left: 35em;
+  background-color: #383836;
+  border-radius: 8px;
+}
+
+.screen {
+  width: 11em;
+  height: 6.8em;
+  position: absolute;
+  bottom: 1.5em;
+  left: 36em;
+  background-color: #c8b7b7;
+}
+
+.keypad {
+  width: 13.5em;
+  height: 0.5em;
+  position: absolute;
+  bottom: 0.5em;
+  left: 34.7em;
+  background-color: #c8c2c2;
+  border-radius: 0.5em;
+}
+
+.mouse {
+  width: 1em;
+  height: 0.7em;
+  position: absolute;
+  bottom: 0.3em;
+  left: 50em;
+  background-color: #38393a;
+  border-radius: 50% 50% 80% 80%;
+}
+
+/* Books on the Desk */
+
+.book1 {
+  width: 7.5em;
+  height: 0.4em;
+  position: absolute;
+  bottom: 0.5em;
+  left: 22.5em;
+  background: #faf9e3;
+  border-radius: 20% 20% 20% 20%;
+  border: 0.3em solid #c65abb;
+  border-right: none;
+  border-left: none;
+}
+
+.book2 {
+  width: 7.5em;
+  height: 0.2em;
+  position: absolute;
+  bottom: 1.4em;
+  left: 22.2em;
+  background: #faf9e3;
+  border-radius: 20% 20% 20% 20%;
+  border: 0.3em solid #553cc6;
+  border-right: none;
+  transform: skew(20deg);
+}
+
+.book3 {
+  width: 6.5em;
+  height: 0.3em;
+  position: absolute;
+  bottom: 2.2em;
+  left: 23em;
+  background: #faf9e3;
+  border-radius: 20% 20% 20% 20%;
+  border: 0.3em solid #7f1720;
+  border-left: none;
+  transform: skew(-15deg);
+}
+
+/* Stand */
+
+.stand {
+  content: "";
+  height: 10px;
+  width: 220px;
+  background: #7f4f24;
+  position: absolute;
+  top: 20em;
+  left: 55em;
+  box-shadow: 0 3px #582f0e;
+}
+/* Left footer */
+.stand:before {
+  content: "";
+  height: 10px;
+  width: 15px;
+  background: #7f4f24;
+  position: absolute;
+  top: 0.6em;
+  right: 11.5em;
+  border-bottom: 2px solid #582f0e;
+  border-left: 2px solid #582f0e;
+  border-right: 2px solid #582f0e;
+}
+/* Right footer */
+.stand:after {
+  content: "";
+  height: 10px;
+  width: 15px;
+  background: #7f4f24;
+  position: absolute;
+  top: 0.6em;
+  right: 1em;
+  border-bottom: 2px solid #582f0e;
+  border-left: 2px solid #582f0e;
+  border-right: 2px solid #582f0e;
+}
+
+/* Vase on the Stand */
+
+.mudCactus {
+  width: 2.8em;
+  height: 2.5em;
+  position: absolute;
+  top: 17.5em;
+  left: 60em;
+  perspective: 200em;
+  background: linear-gradient(to bottom, #c8bd44 20%, #ddd25c 20%, #edc361 60%);
+  border-radius: 10% 10% 50% 50%;
+}
+
+/* Cactus on the Vase */
+.cactus {
+  width: 1.5em;
+  height: 5em;
+  position: absolute;
+  top: 13.5em;
+  left: 60.6em;
+  background-color: #66a754;
+  border-radius: 75% 75% 10% 10%;
+}
+.cactus:before {
+  content: "";
+  position: absolute;
+  bottom: 1.8em;
+  left: 0.5em;
+  width: 1em;
+  height: 2em;
+  background-color: #66a754;
+  border: 2.5px solid #66a754;
+  border-radius: 20% 40% 40% 100%;
+  transform: rotate(250deg);
+}
+
+.cactus:after {
+}
+
+/* Mug */
+
+.mugBody {
+  position: absolute;
+  top: 32.5em;
+  left: 55em;
+  width: 2em;
+  height: 2.5em;
+  background: goldenrod;
+  border-radius: 20% 20% 40% 40%;
+}
+/* Coffee in the Mug */
+.mugBody:before {
+  content: "";
+  position: absolute;
+  top: 0.1em;
+  left: 0.2em;
+  width: 1.6em;
+  height: 0.5em;
+  background-color: brown;
+  border-radius: 20% 20% 70% 70%;
+}
+/* Shadow of the Mug */
+.mugBody:after {
+  content: "";
+  position: absolute;
+  top: 2.4em;
+  left: 0.2em;
+  width: 1.6em;
+  height: 0.2em;
+  background-color: rgb(53, 52, 52);
+  border-radius: 20% 20% 50% 50%;
+}
+/* Mug - Handle*/
+.mugHandle {
+  border-radius: 20% 20% 100% 100%;
+  border: 0.3em solid goldenrod;
+  height: 0.7em;
+  width: 0.2em;
+  position: absolute;
+  top: 32.9em;
+  left: 56.7em;
+}
+
+/* Lamp */
+
+.lamp {
+  width: 4em;
+  height: 2em;
+  position: absolute;
+  top: 5em;
+  left: 45em;
+  background-color: #404040;
+  border-radius: 90% 90% 10% 10%;
+}
+/* Cable */
+.lamp:before {
+  content: "";
+  width: 0.3em;
+  height: 5em;
+  position: absolute;
+  bottom: 2em;
+  left: 1.8em;
+  background-color: #404040;
+}
+/* Light */
+.lamp:after {
+  content: "";
+  width: 1.5em;
+  height: 1em;
+  position: absolute;
+  top: 2em;
+  left: 1.2em;
+  background-color: #fefe9c;
+  border-radius: 10% 10% 50% 50%;
+}
+
+/* Switch */
+
+.switch {
+  width: 1.3em;
+  height: 2em;
+  position: absolute;
+  top: 22em;
+  left: 20em;
+  background-color: #d3d3d3;
+}
+.switch:before {
+  content: "";
+  width: 0.2em;
+  height: 1em;
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  background-color: #9e9e9e;
+  box-shadow: 1px 1px #8e8e8e;
+}
+
+/* Shelf */
+
+.shelf {
+  height: 10em;
+  width: 12em;
+  background: #bfb28c;
+  position: absolute;
+  top: 25em;
+  left: 70em;
+  border: 0.5em solid #f7f1e3;
+}
+/* Vertical */
+.shelf:before {
+  height: 6em;
+  width: 0.5em;
+  background: #f7f1e3;
+  content: "";
+  position: absolute;
+  left: 4em;
+  box-shadow: 60px 0 #f7f1e3;
+}
+/* Horizontal */
+.shelf:after {
+  content: "";
+  position: absolute;
+  height: 0.5em;
+  width: 12em;
+  background: #f7f1e3;
+  top: 40px;
+  box-shadow: 0 55px #f7f1e3;
+}
+
+/* Books in the Shelf */
+
+.books {
+  height: 2.5em;
+  width: 0.7em;
+  background: #60a3bc;
+  position: absolute;
+  transform: rotate(15deg);
+  top: 29em;
+  left: 71em;
+  box-shadow: 0.7em -0.3em #f6b93b, 1.5em -0.5em #4b6584, 2.2em -0.7em #eb4d4b;
+}
+
+/* Joystick */
+
+.joystick {
+  position: absolute;
+  top: 26.5em;
+  left: 75.4em;
+  bottom: 0;
+  background-color: #ebebeb;
+  width: 2.5em;
+  height: 1.5em;
+  border-radius: 10px;
+  clip-path: polygon(
+    20% 100%,
+    35% 70%,
+    65% 70%,
+    80% 100%,
+    100% 100%,
+    100% 0,
+    0 0,
+    0% 100%
+  );
+}
+
+.joystick:before {
+  content: "";
+  width: 0.4em;
+  height: 0.4em;
+  border-radius: 50%;
+  background: #383836;
+  position: absolute;
+  top: 0.2em;
+  left: 0.3em;
+}
+
+.joystick:after {
+  content: "";
+  width: 0.4em;
+  height: 0.4em;
+  border-radius: 50%;
+  background: #383836;
+  position: absolute;
+  top: 0.2em;
+  left: 1.9em;
+}
+
+.controllerJoystick {
+  width: 0.3em;
+  height: 0.1em;
+  position: absolute;
+  top: 0.7em;
+  left: 0.9em;
+  background: #38393a;
+}
+.controllerJoystick:before {
+  content: "";
+  width: 0.1em;
+  height: 0.3em;
+  position: absolute;
+  bottom: -0.1em;
+  left: 0.1em;
+  background: #38393a;
+}
+
+/* Bear */
+
+.bear {
+  width: 3em;
+  height: 5em;
+  position: absolute;
+  top: 32em;
+  left: 77em;
+}
+
+/* Bear - Head */
+
+.bear-head {
+  width: 4em;
+  height: 3em;
+  border-radius: 47%;
+  background-color: #8f6428;
+  position: relative;
+}
+/* Face */
+.bear-face {
+  background-color: #f9b2d5;
+  position: absolute;
+  bottom: 0.5em;
+  left: 1em;
+  width: 2em;
+  height: 1.5em;
+  border-radius: 30px 30px 10px 10px;
+}
+/* Nose */
+.bear-face:before {
+  content: "";
+  width: 1em;
+  height: 0.5em;
+  border-radius: 40% 40% 60% 60%;
+  position: absolute;
+  top: 0.1em;
+  left: 0.5em;
+  background-color: #b0135a;
+}
+/* Mouth */
+.bear-face:after {
+  width: 1.6em;
+  height: 0.5em;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0.9em;
+  left: 0.2em;
+  background-color: #ed4049;
+  border-radius: 20% 20% 80% 80%;
+  transition: 0.2s;
+}
+.bear:hover .bear-face:after {
+  width: 1.4em;
+  height: 0.2em;
+  left: 0.1em;
+  border: 0.2em solid #ed4049;
+  background-color: white;
+  border-radius: 5px 5px 25px 25px;
+}
+
+/* Left ear */
+.bear-head:before {
+  content: "";
+  display: block;
+  background-color: #d77d97;
+  border-radius: 50%;
+  border: 0.5em solid #8f6428;
+  width: 0.3em;
+  height: 0.3em;
+  position: absolute;
+  bottom: 2.3em;
+}
+/* Right art */
+.bear-head:after {
+  content: "";
+  display: block;
+  background-color: #d77d97;
+  border-radius: 50%;
+  border: 0.5em solid #8f6428;
+  width: 0.3em;
+  height: 0.3em;
+  position: absolute;
+  bottom: 2.3em;
+  right: 0;
+}
+
+/* Bear - Body */
+
+.bear-body {
+  position: absolute;
+  width: 4em;
+  height: 0.6em;
+  top: 2.9em;
+  background-color: #caaa4a;
+  left: 0em;
+
+  border-radius: 100% 200% 0% 0%;
+  box-shadow: inset 0 50px 0 15px #714724;
+}
+/* Left arm*/
+.bear-body:before {
+  content: "";
+  position: absolute;
+  width: 0.4em;
+  height: 0.3em;
+  top: 0.3em;
+  background-color: #caaa4a;
+  right: -0.2em;
+  border-radius: 0% 300% 0% 100%;
+  box-shadow: inset 0 50px 0 15px #714724;
+}
+/* Right arm*/
+.bear-body:after {
+  content: "";
+  position: absolute;
+  width: 0.4em;
+  height: 0.4em;
+  top: 0.2em;
+  background-color: #caaa4a;
+  left: -0.2em;
+  border-radius: 300% 0% 100% 0%;
+  box-shadow: inset 0 50px 0 15px #714724;
+}
+
+/* Bear - Eyes*/
+
+/* Left eye */
+.bear-eyes:before {
+  content: "";
+  background-color: #50c2af;
+  height: 0.3em;
+  width: 0.3em;
+  border: 0.3em solid white;
+  border-radius: 50%;
+  position: absolute;
+  left: 1em;
+  top: 0.2em;
+  transition: 0.5s;
+}
+/* Right eye */
+.bear-eyes:after {
+  content: "";
+  background-color: #50c2af;
+  height: 0.3em;
+  width: 0.3em;
+  border: 0.3em solid white;
+  border-radius: 50%;
+  position: absolute;
+  left: 2em;
+  top: 0.2em;
+  transition: 0.5s;
+}
+
+.bear:hover .bear-eyes:before,
+.bear:hover .bear-eyes:after {
+  /* animation-play-state: running; */
+  height: 0.1em;
+}
+
+/*@keyframes wink{
+  50%{height: 1px;}
+}*/
+
+.picture {
+  width: 10em;
+  height: 5em;
+  position: absolute;
+  top: 15em;
+  left: 21.5em;
+  background: url();
+  border: 0.5em solid #caaa4a;
+}
+
+.window {
+  height: 17.5em;
+  width: 12.5em;
+  background: #89c2d9;
+  border: 10px solid #724713;
+  border-top: none;
+  position: absolute;
+  top: 7.5em;
+  left: 75em;
+  box-shadow: 0 0.3em 0 #5a380f, 0.1em 0 #5a380f;
+}
+.window:before {
+  content: "";
+  position: absolute;
+  height: 17.6em;
+  width: 0.8em;
+  background: #724713;
+  left: 6em;
+}
+.window:after {
+  content: "";
+  width: 0.4em;
+  height: 1.5em;
+  position: absolute;
+  top: 8em;
+  left: 6.2em;
+  background-color: #1f1f1f;
+  border-radius: 20% 20% 20% 20%;
+}
+.cloud {
+  width: 1.8em;
+  height: 1.3em;
+  border-radius: 50%;
+  position: absolute;
+  top: 3em;
+  left: 1em;
+  background-color: #e0ecf1;
+  box-shadow: 0 0.2em #b7b8b9;
+}
+.cloud:before {
+  content: "";
+  width: 1.5em;
+  height: 2.2em;
+  border-radius: 50% 50% 80% 40%;
+  position: absolute;
+  top: -0.5em;
+  left: 1.3em;
+  background-color: #e0ecf1;
+  box-shadow: 0 0.2em #b7b8b9;
+}
+.cloud:after {
+  content: "";
+  width: 1.5em;
+  height: 1.3em;
+  border-radius: 50%;
+  position: absolute;
+  top: -0.1em;
+  left: 2.5em;
+  background-color: #e0ecf1;
+}
