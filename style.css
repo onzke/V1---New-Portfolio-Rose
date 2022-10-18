@@ -9,7 +9,7 @@ body {
   position: relative;
   top: 7.5em;
   left: 0em;
-  background-color: #37bfc8;
+  background-color: #289fa7;
 }
 
 .desk {
@@ -24,8 +24,8 @@ body {
 }
 
 .laptop {
-  width: 13em;
-  height: 8em;
+  width: 12em;
+  height: 7em;
   position: absolute;
   bottom: 1em;
   left: 35em;
@@ -34,8 +34,8 @@ body {
 }
 
 .screen {
-  width: 11em;
-  height: 6.8em;
+  width: 10em;
+  height: 5.8em;
   position: absolute;
   bottom: 1.5em;
   left: 36em;
@@ -43,12 +43,12 @@ body {
 }
 
 .keypad {
-  width: 13.5em;
+  width: 12.5em;
   height: 0.5em;
   position: absolute;
   bottom: 0.5em;
   left: 34.7em;
-  background-color: #c8c2c2;
+  background-color: #d0cece;
   border-radius: 0.5em;
 }
 
@@ -163,7 +163,7 @@ body {
   position: absolute;
   bottom: 2.6em;
   left: 0.6em;
-  background-color: #66a754;
+  background-color: #70a561;
   border-radius: 75% 75% 10% 10%;
   box-shadow: 0 0.1em #2d7a47;
 }
@@ -174,8 +174,8 @@ body {
   left: 0.6em;
   width: 1em;
   height: 2em;
-  background-color: #66a754;
-  border: 2.5px solid #66a754;
+  background-color: #70a561;
+  border: 2.5px solid #70a561;
   border-radius: 20% 40% 40% 100%;
   transform: rotate(250deg);
 }
@@ -187,8 +187,8 @@ body {
   right: 0.7em;
   width: 0.5em;
   height: 2.3em;
-  background-color: #66a754;
-  border: 2.5px solid #66a754;
+  background-color: #70a561;
+  border: 2.5px solid #70a561;
   border-radius: 100% 40% 40% 20%;
   transform: rotate(-50deg);
 }
@@ -271,7 +271,7 @@ body {
 }
 
 .light:hover {
-  background-color: #fefe9c;
+  background-color: #f4f494;
 }
 
 /* Switch */
@@ -283,6 +283,7 @@ body {
   top: 22em;
   left: 20em;
   background-color: #d3d3d3;
+  cursor: pointer;
 }
 .switch:before {
   content: "";
@@ -298,7 +299,7 @@ body {
 
 .board {
   width: 8em;
-  height: 4em;
+  height: 6em;
   position: absolute;
   top: 16em;
   left: 34em;
@@ -311,7 +312,7 @@ body {
   width: 0.3em;
   height: 2.5em;
   position: absolute;
-  bottom: 4.1em;
+  bottom: 6.1em;
   left: 3em;
   transform: rotate(50deg);
   background: #d4c7a0;
@@ -322,7 +323,7 @@ body {
   width: 0.3em;
   height: 2.5em;
   position: absolute;
-  bottom: 4.1em;
+  bottom: 6.1em;
   left: 5em;
   transform: rotate(-50deg);
   background: #d4c7a0;
@@ -644,7 +645,7 @@ body {
 .window {
   height: 24em;
   width: 13.5em;
-  background: #89c2d9;
+  background: linear-gradient(#60676b, #aab1b1, #8598a0);
   border: 10px solid #724713;
   position: absolute;
   top: 2em;
@@ -671,10 +672,6 @@ body {
   border-radius: 20% 20% 20% 20%;
 }
 
-.window:hover {
-  background: #21272a;
-}
-
 .cloud1 {
   width: 1.8em;
   height: 1.3em;
@@ -682,7 +679,7 @@ body {
   position: absolute;
   top: 3em;
   left: 1em;
-  background-color: #e0ecf1;
+  background-color: #bdc2c4;
   box-shadow: 0 0.2em #b7b8b9;
 }
 .cloud1:before {
@@ -693,7 +690,7 @@ body {
   position: absolute;
   top: -0.5em;
   left: 1.3em;
-  background-color: #e0ecf1;
+  background-color: #bdc2c4;
   box-shadow: 0 0.2em #b7b8b9;
 }
 .cloud1:after {
@@ -704,7 +701,7 @@ body {
   position: absolute;
   top: -0.1em;
   left: 2.5em;
-  background-color: #e0ecf1;
+  background-color: #bdc2c4;
 }
 
 .cloud2 {
@@ -714,7 +711,7 @@ body {
   position: absolute;
   top: 6.5em;
   left: 8.3em;
-  background-color: #d5e4e9;
+  background-color: #bdc2c4;
 }
 .cloud2:before {
   content: "";
@@ -724,7 +721,7 @@ body {
   position: absolute;
   top: -0.5em;
   left: 1.1em;
-  background-color: #d3e5ee;
+  background-color: #bdc2c4;
   box-shadow: 0 0.2em #9ebdcc;
 }
 .cloud2:after {
@@ -735,6 +732,6 @@ body {
   position: absolute;
   top: 0.1em;
   left: 2.3em;
-  background-color: #c9dfe9;
+  background-color: #bdc2c4;
   box-shadow: 0 0.2em #abc5d0;
 }
