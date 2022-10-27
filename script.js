@@ -5,11 +5,18 @@ $(document).ready(function () {
       .animate({ left: 125 }, 2000)
       .animate({ left: 140 }, 2000, loop);
   }
-
   loop();
 });
 
-$(".switch").click(function () {
+$(document).ready(function () {
+  $(".post2").fadeOut(2000);
+  $(".board").append('<div class="post3">Running</div>');
+  $(".post3").fadeIn(4000);
+  $(".post3").fadeToggle(2000, "linear");
+  $(".post2").fadeIn(6000);
+});
+
+$(".switch").mouseenter(function () {
   $(".light").css("backgroundColor", "#f4f494");
   $(".containerDesign").css("backgroundColor", "#38bbc4");
   $(".window").css("backgroundColor", "#21272a");
@@ -17,7 +24,7 @@ $(".switch").click(function () {
   $(".cloud2").css("opacity", "60%");
 });
 
-$(".switch").dblclick(function () {
+$(".switch").mouseout(function () {
   $(".light").css("backgroundColor", "#ececd3");
   $(".containerDesign").css("backgroundColor", "#289fa7");
   $(".window").css("backgroundColor", "#839faa");
