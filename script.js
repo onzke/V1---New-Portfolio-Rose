@@ -8,7 +8,7 @@ $(document).ready(function () {
     $(".board").append('<div class="post3">Running</div>');
     $(".post3").fadeIn(4000);
     $(".post2").fadeIn(6000);
-    $(".post3").fadeToggle(2000, 0);
+    $(".post3").fadeOut(2000);
   }
   loop();
 });
