@@ -417,6 +417,28 @@ body {
   box-shadow: 0 55px #f7f1e3;
 }
 
+.games {
+  width: 4em;
+  height: 1em;
+  background-color: #f7f1e3;
+  position: absolute;
+  bottom: 10.55em;
+  left: 6em;
+  transform: skew(-5deg);
+  box-shadow: 1px 1px #919191;
+}
+
+.games:before {
+  content: "";
+  width: 0.3em;
+  height: 0.3em;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.3em;
+  left: 3.5em;
+  background-color: #38393a;
+}
+
 /* Books in the Shelf */
 
 .books {

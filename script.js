@@ -4,17 +4,22 @@ $(document).ready(function () {
     $(".cloud2")
       .animate({ left: 125 }, 2000)
       .animate({ left: 140 }, 2000, loop);
+    $(".post2").fadeOut(2000);
+    $(".board").append('<div class="post3">Running</div>');
+    $(".post3").fadeIn(4000);
+    $(".post2").fadeIn(6000);
+    $(".post3").fadeToggle(2000, 0);
   }
   loop();
 });
 
-$(document).ready(function () {
+/*$(document).ready(function () {
   $(".post2").fadeOut(2000);
   $(".board").append('<div class="post3">Running</div>');
   $(".post3").fadeIn(4000);
   $(".post3").fadeToggle(2000, "linear");
   $(".post2").fadeIn(6000);
-});
+});*/
 
 $(".switch").mouseenter(function () {
   $(".light").css("backgroundColor", "#f4f494");
