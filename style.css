@@ -385,8 +385,8 @@ body {
   width: 5.5em;
   height: 2.5em;
   position: absolute;
-  top: 3.5em;
-  left: 5.5em;
+  top: 4.5em;
+  left: 3.5em;
   background: #30fb52;
   transform: rotate(5deg);
   font-size: 10px;
@@ -655,6 +655,14 @@ body {
 
 /* Bear - Eyes*/
 
+.bear-eyes {
+  animation: closeEyes 2s ease-out infinite;
+}
+@keyframes closeEyes {
+  100% {
+    height: 0.2em;
+  }
+}
 /* Left eye */
 .bear-eyes:before {
   content: "";
@@ -684,13 +692,8 @@ body {
 
 .bear:hover .bear-eyes:before,
 .bear:hover .bear-eyes:after {
-  /* animation-play-state: running; */
   height: 0.1em;
 }
-
-/*@keyframes wink{
-  50%{height: 1px;}
-}*/
 
 .picture {
   width: 9em;
