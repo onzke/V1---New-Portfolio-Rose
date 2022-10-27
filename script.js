@@ -6,7 +6,7 @@ $(document).ready(function () {
       .animate({ left: 140 }, 2000, loop);
     $(".post2").fadeOut(2000);
     $(".board").append('<div class="post3">Running</div>');
-    //$(".post3").fadeIn(4000);
+    $(".post3").fadeIn(4000);
     $(".post2").fadeIn(6000);
     $(".post3").toggle(4000);
   }
