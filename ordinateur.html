@@ -23,7 +23,50 @@
       <div class="desk"></div>
 
       <div class="laptop"></div>
-      <div class="screen"></div>
+      <div class="screen">
+        <div class="openScreen">
+          <div class="welcome"></div>
+
+          <!-- videosGame : League of Legends (Lol). in the screen after animation. -->
+          <!-- Player : Video. -->
+          <div class="player">
+            <video controls>
+              <source src="../AnimOrdinateur/lol.mp4" type="video/mp4" />
+            </video>
+            <!-- Controler : Video Controler to play video.-->
+            <div class="controler">
+              <!-- Button "Play" : Play video. -->
+              <div class="play">
+                <input
+                  class="playerVideo"
+                  type="image"
+                  src="../AnimOrdinateur/play.png"
+                  data-img="video"
+                  alt="play"
+                />
+              </div>
+
+              <!-- Button "Stop" : Stop video. -->
+              <div class="stop">
+                <input
+                  class="stopVideo"
+                  type="image"
+                  src="../AnimOrdinateur/remove.png"
+                  data-img="video"
+                  alt="play"
+                />
+              </div>
+
+              <!-- Tmer : show timer of the video. -->
+              <div class="timer">
+                <div></div>
+                <span aria-label="timer"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="keypad"></div>
       <div class="mouse"></div>
 
@@ -50,6 +93,7 @@
       <div class="board">
         <div class="post1">Coding</div>
         <div class="post2">Buy childcare</div>
+        <div class="post3">Running</div>
       </div>
 
       <div class="shelf">

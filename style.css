@@ -40,13 +40,202 @@ body {
   bottom: 1.5em;
   left: 36em;
   background-color: #c8b7b7;
+  animation: openScreen 2s normal 1s forwards infinite;
+}
+@keyframes openScreen {
+  100% {
+    background-color: #7e91a9;
+  }
+}
+.welcome.openScreen {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border-top: 3px solid #fff;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: loading 4s linear forwards;
+  margin-top: 1.5em;
+  margin-left: 3.5em;
 }
 
-.screen input {
-  margin-left: 2em;
-  margin-top: 1em;
-  width: 7.5em;
-  border-radius: 20% 20% 20% 20%;
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+    background: none;
+  }
+  50% {
+    transform: rotate(360deg);
+    background: none;
+  }
+  80% {
+    transform: rotate(0);
+    background-image: none;
+    border-color: transparent;
+  }
+  100% {
+    border-color: transparent;
+    transform: rotate(0);
+  }
+}
+
+.welcome.openGame {
+  transform: rotate(0);
+  margin-left: 4em;
+  background-image: url("../AnimOrdinateur/lollogo.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+/* Video */
+.openGame video {
+  width: 10.4em;
+  position: absolute;
+  bottom: 0em;
+  opacity: 0;
+  animation: animVideo 0.5s 5s forwards;
+}
+@keyframes animVideo {
+  100% {
+    opacity: 1;
+  }
+}
+/* Controler video */
+.controler {
+  width: 9em;
+  height: 0.5em;
+  margin-bottom: 0.4em;
+  margin-left: 0.5em;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0.7em;
+  left: 0em;
+  visibility: hidden;
+  background-color: grey;
+  animation: animControler 4.5s normal 5s forwards;
+}
+@keyframes animControler {
+  100% {
+    visibility: visible;
+  }
+}
+/* Video : Show only video, not the controler. */
+.player:hover .controls,
+.player:focus .controls {
+  visibility: hidden;
+}
+/* Video */
+
+.play {
+  margin-bottom: 10px;
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  bottom: 0.8em;
+  left: 0.5em;
+  visibility: hidden;
+  animation: animControler 4.5s normal 5s forwards;
+}
+@keyframes animControler {
+  100% {
+    visibility: visible;
+  }
+}
+
+.playerVideo {
+  width: 1.5em;
+  object-position: right top;
+  object-fit: contain;
+  background-color: transparent;
+}
+
+.stop {
+  margin-bottom: 10px;
+  width: 0.8em;
+  height: 0.8em;
+  position: absolute;
+  visibility: hidden;
+  bottom: 0.9em;
+  left: 7.8em;
+  animation: animControler 4.5s normal 5s forwards;
+}
+@keyframes animControler {
+  100% {
+    visibility: visible;
+  }
+}
+
+.stopVideo {
+  width: 1.5em;
+  object-position: right top;
+  object-fit: contain;
+  background-color: transparent;
+}
+
+.timer {
+  animation: animVideo 0.5s 5s forwards;
+}
+@keyframes animVideo {
+  100% {
+    opacity: 1;
+  }
+}
+
+.timer {
+  line-height: 38px;
+  font-size: 10px;
+  font-family: monospace;
+  text-shadow: 1px 1px 0px black;
+  color: white;
+  flex: 5;
+  position: relative;
+}
+
+.timer div {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.2);
+  left: 0;
+  top: 0;
+  width: 0em;
+  height: 0.8em;
+  z-index: 1;
+  border-radius: 10px;
+  animation: progressBar 30s normal 0s forwards;
+  transition: 5s all;
+}
+@keyframes progressBar {
+  20% {
+    width: 1em;
+    transition: 5s all;
+    background-color: #404040;
+  }
+  40% {
+    width: 3em;
+    transition: 5s all;
+    background-color: #404040;
+  }
+  60% {
+    width: 5em;
+    transition: 5s all;
+    background-color: #404040;
+  }
+  80% {
+    width: 8em;
+    transition: 5s all;
+    background-color: #404040;
+  }
+  100% {
+    width: 13.5em;
+    transition: 5s all;
+    background-color: #404040;
+  }
+}
+
+.timer span {
+  position: absolute;
+  z-index: 2;
+  left: 19px;
 }
 
 .keypad {
@@ -370,7 +559,7 @@ body {
   width: 5.5em;
   height: 2.5em;
   position: absolute;
-  top: 3em;
+  top: 2.5em;
   left: 6.5em;
   background: #fb30f4;
   transform: rotate(5deg);
@@ -385,16 +574,15 @@ body {
   width: 5.5em;
   height: 2.5em;
   position: absolute;
-  top: 4.5em;
-  left: 3.5em;
+  top: 5.5em;
+  left: 2.8em;
   background: #30fb52;
-  transform: rotate(5deg);
+  transform: rotate(-2deg);
   font-size: 10px;
   font-family: "Courier New", Courier, monospace;
   padding: 0.2em;
   text-align: center;
   box-shadow: 1px 1px #52b63b;
-  display: none;
 }
 
 /* Shelf */
@@ -701,7 +889,7 @@ body {
   position: absolute;
   top: 15em;
   left: 71.5em;
-  background-image: url("../AnimOrdinateur/Teemo320.jpeg");
+  background-image: url("../AnimOrdinateur/Teemo320.png");
   border: 0.1em solid #404040;
   box-shadow: 0 0.3em #404040, 0.3em 0 #404040;
 }
