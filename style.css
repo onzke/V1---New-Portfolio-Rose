@@ -102,7 +102,7 @@ body {
   }
 }
 /* Controler video */
-.controler {
+/*.controler {
   width: 9em;
   height: 0.5em;
   margin-bottom: 0.4em;
@@ -114,7 +114,7 @@ body {
   visibility: hidden;
   background-color: grey;
   animation: animControler 4.5s normal 5s forwards;
-}
+}*/
 @keyframes animControler {
   100% {
     visibility: visible;
@@ -123,7 +123,7 @@ body {
 /* Video : Show only video, not the controler. */
 .player:hover .controls,
 .player:focus .controls {
-  visibility: hidden;
+  opacity: 0;
 }
 /* Video */
 
@@ -132,8 +132,8 @@ body {
   width: 1em;
   height: 1em;
   position: absolute;
-  bottom: 0.8em;
-  left: 0.5em;
+  bottom: 1.9em;
+  left: 0.9em;
   visibility: hidden;
   animation: animControler 4.5s normal 5s forwards;
 }
@@ -152,12 +152,12 @@ body {
 
 .stop {
   margin-bottom: 10px;
-  width: 0.8em;
-  height: 0.8em;
+  width: 0.7em;
+  height: 0.7em;
   position: absolute;
   visibility: hidden;
-  bottom: 0.9em;
-  left: 7.8em;
+  bottom: 2.2em;
+  left: 8.2em;
   animation: animControler 4.5s normal 5s forwards;
 }
 @keyframes animControler {
@@ -173,13 +173,27 @@ body {
   background-color: transparent;
 }
 
-.timer {
-  animation: animVideo 0.5s 5s forwards;
+.remove {
+  margin-bottom: 10px;
+  width: 0.8em;
+  height: 0.8em;
+  position: absolute;
+  visibility: hidden;
+  bottom: 4.2em;
+  left: 9.2em;
+  animation: animControler 4.5s normal 5s forwards;
 }
-@keyframes animVideo {
+@keyframes animControler {
   100% {
-    opacity: 1;
+    visibility: visible;
   }
+}
+
+.removeVideo {
+  width: 1em;
+  object-position: right top;
+  object-fit: contain;
+  background-color: transparent;
 }
 
 .timer {
@@ -190,6 +204,12 @@ body {
   color: white;
   flex: 5;
   position: relative;
+  animation: animVideo 0.5s 5s forwards;
+}
+@keyframes animVideo {
+  100% {
+    opacity: 1;
+  }
 }
 
 .timer div {
@@ -199,42 +219,16 @@ body {
   top: 0;
   width: 0em;
   height: 0.8em;
-  z-index: 1;
+
   border-radius: 10px;
-  animation: progressBar 30s normal 0s forwards;
+
   transition: 5s all;
-}
-@keyframes progressBar {
-  20% {
-    width: 1em;
-    transition: 5s all;
-    background-color: #404040;
-  }
-  40% {
-    width: 3em;
-    transition: 5s all;
-    background-color: #404040;
-  }
-  60% {
-    width: 5em;
-    transition: 5s all;
-    background-color: #404040;
-  }
-  80% {
-    width: 8em;
-    transition: 5s all;
-    background-color: #404040;
-  }
-  100% {
-    width: 13.5em;
-    transition: 5s all;
-    background-color: #404040;
-  }
+  z-index: 2;
 }
 
 .timer span {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   left: 19px;
 }
 
@@ -297,8 +291,70 @@ body {
   border: 0.3em solid #7f1720;
   border-left: none;
   transform: skew(-15deg);
+  cursor: pointer;
+  animation: moveBook 2s normal forwards;
+  animation-iteration-count: 2;
+}
+@keyframes moveBook {
+  20% {
+    left: 22em;
+  }
+  40% {
+    left: 24em;
+    transform: rotate(-5deg);
+  }
+  60% {
+    left: 22em;
+    transform: rotate(5deg);
+  }
+  90% {
+    left: 24em;
+    transform: rotate(0deg);
+  }
 }
 
+.openBook {
+  width: 26em;
+  height: 20em;
+  background: #f3f1cc;
+  border-radius: 0%;
+  border: 0.3em solid #7f1720;
+  z-index: 1;
+  transform: skew(0deg);
+  font-size: 12px;
+  position: absolute;
+  transform: rotate(0deg);
+}
+.openBook:before {
+  content: "";
+  width: 0.3em;
+  height: 20.1em;
+  position: absolute;
+  bottom: -0.1em;
+  left: 13em;
+  background-color: #7f1720;
+}
+.openBook:after {
+  content: "Hello, I'm Roselyne";
+  width: 10em;
+  height: 5.1em;
+  position: absolute;
+  bottom: 13em;
+  left: 1.5em;
+  opacity: 0;
+  animation: writer 5s normal forwards;
+}
+@keyframes writer {
+  30% {
+    opacity: 0.3;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* Stand */
 
 .stand {

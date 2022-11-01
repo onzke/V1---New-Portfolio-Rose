@@ -4,6 +4,7 @@ $(document).ready(function () {
     $(".cloud2")
       .animate({ left: 125 }, 2000)
       .animate({ left: 140 }, 2000, loop);
+
     $(".post2").fadeOut(2000);
     $(".post3").fadeIn(4200);
     $(".post2").fadeIn(6000);
@@ -20,131 +21,67 @@ $(document).ready(function () {
   $(".openScreen").addClass("openGame");
   $("openGame").ready(function () {
     function playVideo() {
-      // $(".openScreen").addClass("openGame");
+      var game = document.getElementsByClassName("openScreen")[0];
       var media = document.querySelector("video");
       var controls = document.querySelector(".controls");
       var controler = document.querySelector(".controler");
 
       var play = document.querySelector(".play");
       var stop = document.querySelector(".stop");
+      var remove = document.querySelector(".remove");
 
-      var timerWrapper = document.querySelector(".timer");
-      var timer = document.querySelector(".timer span");
-      var timerBar = document.querySelector(".timer div");
-
-      timerWrapper.style.visibility = "hidden";
       media.style.visibility = "visible";
 
       play.addEventListener("click", playPauseMedia);
       stop.addEventListener("click", stopMedia);
+      remove.addEventListener("click", removeVideo);
       media.addEventListener("ended", stopMedia);
-
-      media.addEventListener("timeupdate", setTime);
 
       function playPauseMedia() {
         if (media.paused) {
           play.setAttribute("data-img", "video");
           media.play();
+          media.setTime();
         } else {
-          timerWrapper.style.visibility = "visible";
           play.setAttribute("data-img", "video");
           media.pause();
+          media.setTime();
         }
       }
       playPauseMedia();
 
       function stopMedia() {
-        timerWrapper.style.visibility = "hidden";
         media.pause();
         media.currentTime = 0;
-        play.setAttribute("data-img", "video");
-
-        var intervalFwd;
-        var intervalRwd;
-
-        rwd.addEventListener("click", mediaBackward);
-        fwd.addEventListener("click", mediaForward);
-
-        function mediaBackward() {
-          clearInterval(intervalFwd);
-          fwd.classList.remove("active");
-
-          if (rwd.classList.contains("active")) {
-            rwd.classList.remove("active");
-            clearInterval(intervalRwd);
-            media.play();
-          } else {
-            rwd.classList.add("active");
-            media.pause();
-            intervalRwd = setInterval(windBackward, 200);
-          }
-        }
-
-        function mediaForward() {
-          clearInterval(intervalRwd);
-          rwd.classList.remove("active");
-
-          if (fwd.classList.contains("active")) {
-            fwd.classList.remove("active");
-            clearInterval(intervalFwd);
-            media.play();
-          } else {
-            fwd.classList.add("active");
-            media.pause();
-            intervalFwd = setInterval(windForward, 200);
-          }
-        }
+        play.setAttribute("data-img", "videoOff");
       }
 
-      function windBackward() {
-        if (media.currentTime <= 3) {
-          stopMedia();
-        } else {
-          media.currentTime -= 3;
-        }
+      function removeVideo() {
+        media.remove();
+        remove.setAttribute("data-img", "exitVideo");
+        remove.remove();
+        play.remove();
+        stop.remove();
+        game.style.visibility = "hidden";
       }
-
-      function windForward() {
-        if (media.currentTime >= media.duration - 3) {
-          stopMedia();
-        } else {
-          media.currentTime += 3;
-        }
-      }
-
-      function setTime() {
-        var minutes = Math.floor(media.currentTime / 60);
-        var seconds = Math.floor(media.currentTime - minutes * 60);
-        var minuteValue;
-        var secondValue;
-
-        if (minutes < 10) {
-          minuteValue = "0" + minutes;
-        } else {
-          minuteValue = minutes;
-        }
-
-        if (seconds < 10) {
-          secondValue = "0" + seconds;
-        } else {
-          secondValue = seconds;
-        }
-
-        var mediaTime = minuteValue + ":" + secondValue;
-        timer.textContent = mediaTime;
-
-        var barLength = timerWrapper * (media.currentTime / media.duration);
-        timerBar.setAttribute("data-icon", "P");
-        timerBar.style.width = barLength + "px";
-      }
-      rwd.classList.remove("active");
-      fwd.classList.remove("active");
-      clearInterval(intervalRwd);
-      clearInterval(intervalFwd);
     }
     playVideo();
   });
 });
+
+// opening Book.
+
+$(".book3").mouseenter(function () {
+  $(".book3").animate({ left: 600 }, 10).animate({ top: 200 }, 10);
+  $(".book3").addClass("openBook");
+});
+
+$(".book3").click(function () {
+  $(".book3").animate({ left: 360 }, 10).animate({ top: 518 }, 10);
+  $(".book3").removeClass("openBook");
+});
+
+// Switch On-Off
 
 $(".switch").mouseenter(function () {
   $(".light").css("backgroundColor", "#f4f494");
@@ -161,5 +98,3 @@ $(".switch").mouseout(function () {
   $(".cloud1").css("opacity", "100%");
   $(".cloud2").css("opacity", "100%");
 });
-
-// Vidéo
